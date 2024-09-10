@@ -43,3 +43,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 페이지 이동할때 리렌더링 안되게 하고싶을땐 layout, 리렌더링 되게 하고싶을땐 template
 
 서로 공존 x, 선택해야함, 대부분 layout
+
+## css 모듈 선택 이유
+- tailwind →호불호 심하고, 가독성 x
+- Styled Component → Server Component SSR 문제
+- sass
+- css module →sass보다 간단
+- vanilla extract → Windows와 문제
+- 100dvw, 100dvh → 레이아웃 틀어짐 방지

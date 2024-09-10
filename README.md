@@ -38,3 +38,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## (폴더명)
 라우트에 영향x, layout 가능
+
+## layout vs template
+페이지 이동할때 리렌더링 안되게 하고싶을땐 layout, 리렌더링 되게 하고싶을땐 template
+
+서로 공존 x, 선택해야함, 대부분 layout

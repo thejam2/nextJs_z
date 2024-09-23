@@ -56,3 +56,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - 모달 창 → 패러렐 라우트와 인터셉트 라우트
 - 뒤에보일 page와 @modal 폴더를 같은 경로에 생성
 - @modal폴더 안에 모달 page 생성
+- defaults.tsx -> 패러렐 라우트에 대한 기본 값 (그냥 return null;해주면 됨)

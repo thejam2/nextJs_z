@@ -51,3 +51,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - css module →sass보다 간단
 - vanilla extract → Windows와 문제
 - 100dvw, 100dvh → 레이아웃 틀어짐 방지
+
+## 패러렐 라우트
+- 모달 창 → 패러렐 라우트와 인터셉트 라우트

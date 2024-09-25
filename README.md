@@ -57,3 +57,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - 뒤에보일 page와 @modal 폴더를 같은 경로에 생성
 - @modal폴더 안에 모달 page 생성
 - defaults.tsx -> 패러렐 라우트에 대한 기본 값 (그냥 return null;해주면 됨)
+
+## 인터셉팅 라우트
+- 주소가 다른데 같이 뜨게 만들어주는 것
+- (..)i → ..은 부모 컴포넌트
+- (..)이나 (.)은 브라우저 주소 기준
+- 만약 (beforeLogin)안의 @modal 안에 (..)i 폴더를 생성 시 (beforeLogin)보다 더 상위의 app으로 이동 (@가 붙은 폴더의 경우는 주소에 해당되지 않아서 무시)
+- i/login/page.tsx를 대체하고 싶다면 @modal/(.)i로 i의 파일 이름을 변경해야함
+- 패러렐 라우트가 있고 인터셉팅 라우트가 있다면 메인의 i/flow/page가 처리하는 게 아니라 인터셉팅 라우트의 page가 처리하게 됨 (클라이언트에서 라우팅 할 때만 인터셉트 라우팅이 적용)
+- 직접 접근, 새로고침, 주소로 접근 시 메인 i로 실행되어서 i/login/page.tsx도 필요

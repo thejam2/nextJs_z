@@ -66,3 +66,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - i/login/page.tsx를 대체하고 싶다면 @modal/(.)i로 i의 파일 이름을 변경해야함
 - 패러렐 라우트가 있고 인터셉팅 라우트가 있다면 메인의 i/flow/page가 처리하는 게 아니라 인터셉팅 라우트의 page가 처리하게 됨 (클라이언트에서 라우팅 할 때만 인터셉트 라우팅이 적용)
 - 직접 접근, 새로고침, 주소로 접근 시 메인 i로 실행되어서 i/login/page.tsx도 필요
+
+## private folder(_폴더)
+- 중복 파일의 정리 필요 → private folder 로 해결(주소 창에는 안 뜸)
+    1. 이렇게 될 경우 공통 분모인 login.modal.css는 _ 폴더로 들어가고 각 page만 남길 수 있음
+    2. page의 공통 부분도 LoginModal 파일에 넣어서 해결
+- 서버 컴포넌트는 클라이언트 컴포넌트를 import해도 되지만 그 반대는 지양하여야 함 (해도 되지만 클라이언트 컴포넌트가 서버 컴포넌트를 import하게 되면 서버 컴포넌트가 클라이언트 컴포넌트로 변경되는 문제 발생)

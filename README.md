@@ -56,6 +56,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - 모달 창 → 패러렐 라우트와 인터셉트 라우트
 - 뒤에보일 page와 @modal 폴더를 같은 경로에 생성
 - @modal폴더 안에 모달 page 생성
+- modal이 여러개일 경우 폴더 추가 ex) @modal2 (개수는 적절하게, 너무 많은건 지양)
 - defaults.tsx -> 패러렐 라우트에 대한 기본 값 (그냥 return null;해주면 됨)
 
 ## 인터셉팅 라우트
@@ -72,3 +73,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     1. 이렇게 될 경우 공통 분모인 login.modal.css는 _ 폴더로 들어가고 각 page만 남길 수 있음
     2. page의 공통 부분도 LoginModal 파일에 넣어서 해결
 - 서버 컴포넌트는 클라이언트 컴포넌트를 import해도 되지만 그 반대는 지양하여야 함 (해도 되지만 클라이언트 컴포넌트가 서버 컴포넌트를 import하게 되면 서버 컴포넌트가 클라이언트 컴포넌트로 변경되는 문제 발생)
+
+## replace vs push
+- 뒤로가기 시의 차이
+    1.  push의 경우 ([localhost:3000](http://localhost:3000) → [localhost:3000/login](http://localhost:3000/login) → localhost:3000/i/flow/login)
+        - 그 전 페이지인 /login으로 가지만 다시 자동으로 /i/flow/login으로 넘어가면서 무한 반복이 됨
+    2. replace의 경우([localhost:3000](http://localhost:3000) → [localhost:3000/login](http://localhost:3000/login) → localhost:3000/i/flow/login)
+        - 바로 맨 처음 페이지로 로딩되므로 무한로딩이 되지 않음(/login 히스토리가 없어짐)

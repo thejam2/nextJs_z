@@ -80,3 +80,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
         - 그 전 페이지인 /login으로 가지만 다시 자동으로 /i/flow/login으로 넘어가면서 무한 반복이 됨
     2. replace의 경우([localhost:3000](http://localhost:3000) → [localhost:3000/login](http://localhost:3000/login) → localhost:3000/i/flow/login)
         - 바로 맨 처음 페이지로 로딩되므로 무한로딩이 되지 않음(/login 히스토리가 없어짐)
+
+## CSS
+- 메인 페이지의 동일한 부분 Main이라는 공통 부분을 컴포넌트로 뽑아내기.(가독성)

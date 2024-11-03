@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import ZLogo from "../../../public/zlogo.png";
 import NavMenu from "@/app/(afterLogin)/_component/NavMenu";
-import LogoutButton from "@/app/(afterLogin)/_component/LogoutButton";
-import TrendSection from "@/app/(afterLogin)/_component/TrendSection";
-import FollowRecommend from "@/app/(afterLogin)/_component/FollowRecommend";
+import LogoutButton from "./_component/LogoutButton";
+import TrendSection from "./_component/TrendSection";
+import FollowRecommend from "./_component/FollowRecommend";
 
 export default function AfterLoginLayout({
   children,
